@@ -112,9 +112,9 @@ end;
 procedure TForm1.cbb1Change(Sender: TObject);
 begin
  if cbb1.ItemIndex = 0 then // assuming "YES" is the first item in the combobox
-    lbl8.Caption := '10%' // set the label caption to "10%"
+    lbl8.Caption := '15%' // set the label caption to "10%"
   else
-    lbl8.Caption := '5%' // set the label caption to "5%"
+    lbl8.Caption := '10%' // set the label caption to "5%"
 end;
 
 procedure TForm1.btn3Click(Sender: TObject);
@@ -123,14 +123,14 @@ begin
   begin
   try
     // Validasi NIK
-    if Trim(Edit1.Text) = '' then
+    if Trim(edt1.Text) = '' then
     begin
       ShowMessage('NIK tidak boleh kosong.');
       Exit;
     end;
 
     // Validasi Nama
-    if Trim(Edit2.Text) = '' then
+    if Trim(edt2.Text) = '' then
     begin
       ShowMessage('Nama tidak boleh kosong.');
       Exit;
@@ -142,8 +142,8 @@ begin
                           'EMAIL = :email, ALAMAT = :alamat WHERE NIK = :nik');
 
     // Menetapkan nilai parameter
-    Form1.ZQuery1.Params.ParamByName('nama').AsString := Edit2.Text;    // Nama baru
-    Form1.ZQuery1.Params.ParamByName('telp').AsString := Edit3.Text;    // Telp baru
+    Form1.ZQuery1.Params.ParamByName('nama').AsString := edt2.Text;    // Nama baru
+    Form1.ZQuery1.Params.ParamByName('telp').AsString := edt3.Text;    // Telp baru
     Form1.ZQuery1.Params.ParamByName('email').AsString := Edit4.Text;  // Email baru
     Form1.ZQuery1.Params.ParamByName('alamat').AsString := Edit5.Text;  // Alamat baru
     Form1.ZQuery1.Params.ParamByName('nik').AsString := Edit1.Text;      // NIK dari baris yang akan diperbarui
