@@ -11,6 +11,7 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -131,6 +132,7 @@ object Form1: TForm1
     Height = 33
     Caption = 'BARU'
     TabOrder = 6
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 264
@@ -157,6 +159,7 @@ object Form1: TForm1
     Height = 33
     Caption = 'HAPUS'
     TabOrder = 9
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 552
@@ -165,6 +168,7 @@ object Form1: TForm1
     Height = 33
     Caption = 'BATAL'
     TabOrder = 10
+    OnClick = btn5Click
   end
   object dbgrd1: TDBGrid
     Left = 232
@@ -178,6 +182,7 @@ object Form1: TForm1
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object edt6: TEdit
     Left = 296
@@ -198,7 +203,7 @@ object Form1: TForm1
     Database = 'penjualan_uasvisual2'
     User = 'root'
     Protocol = 'mysql'
-    LibraryLocation = 'E:\Semester 4\Visual 2\fiture_member\libmysql.dll'
+    LibraryLocation = 'E:\Semester 4\Visual 2\fiture_member\fiture_member\libmysql.dll'
     Left = 16
     Top = 8
   end
